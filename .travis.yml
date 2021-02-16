@@ -5,22 +5,22 @@ services: docker
 env:
   global:
     - ROLE_NAME: telegraf
-  matrix:
-    - MOLECULE_DISTRO: centos7
-    - MOLECULE_DISTRO: centos6
-
-install:
-  - pip install molecule docker
-
-  - git clone https://github.com/arillso/tests molecule/default/lint
-
-before_script:
-  - cd ../
-  - mv ansible.$ROLE_NAME sbaerlocher.$ROLE_NAME
-  - cd sbaerlocher.$ROLE_NAME
-
-script:
-  - molecule test
+#  matrix:
+#    - MOLECULE_DISTRO: centos7
+#    - MOLECULE_DISTRO: centos6
+#
+#install:
+#  - pip install molecule docker
+#
+#  - git clone https://github.com/arillso/tests molecule/default/lint
+#
+#before_script:
+#  - cd ../
+#  - mv ansible.$ROLE_NAME sbaerlocher.$ROLE_NAME
+#  - cd sbaerlocher.$ROLE_NAME
+#
+#script:
+#  - molecule test
 
 notifications:
   webhooks:
