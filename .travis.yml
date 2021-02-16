@@ -20,8 +20,8 @@ install:
 #  - mv ansible.$ROLE_NAME sbaerlocher.$ROLE_NAME
 #  - cd sbaerlocher.$ROLE_NAME
 #
-#script:
-#  - molecule test
+script:
+  - cd .
 
 notifications:
   webhooks:
